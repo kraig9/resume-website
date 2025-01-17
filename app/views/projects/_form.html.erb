@@ -1,0 +1,28 @@
+<%= form_with(model: project) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :tags %>
+    <%= f.text_field :tags %>
+  </div>
+
+  <h3>Links</h3>
+  <%= f.fields_for :links do |link_form| %>
+    <div>
+      <%= link_form.label :link_type %>
+      <%= link_form.text_field :link_type %>
+      <%= link_form.label :url %>
+      <%= link_form.text_field :url %>
+      <%= link_form.check_box :_destroy %> Remove this link
+    </div>
+  <% end %>
+  <%= f.submit %>
+<% end %>

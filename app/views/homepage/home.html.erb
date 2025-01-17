@@ -1,2 +1,81 @@
-<h1>Homepage#home</h1>
-<p>Find me in app/views/homepage/home.html.erb</p>
+<h1>Kraig Orcutt</h1>
+<h3>Senior Machine Learning Engineer</h3>
+
+<section id="about-me">
+  <h2>About Me</h2>
+  <div data-toggle-target="content">
+    <p>Kraig Orcutt, a passionate Senior Machine Learning Engineer with <%= Time.current.year - 2019 %> years of experience in 
+    Machine Learning. I specialize in Computer Vision and NLP and have a strong background in end to end machine learning solutions that solve business problems.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div data-toggle-target="content">
+    <ul>
+      <li>
+        <h3>Senior Machine Learning Engineer at Lockheed Martin</h3>
+        <p>Brief description of your role and achievements.</p>
+      </li>
+      <li>
+        <h3>Machine Learning Engineer at Lockheed Martin</h3>
+        <p>Brief description of your role and achievements.</p>
+      </li>
+      <li>
+        <h3>Software Engineer at Lockheed Martin</h3>
+        <p>Brief description of your role and achievements.</p>
+      </li>
+      <!-- Add more experiences as needed -->
+    </ul>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div data-toggle-target="content">
+    <ul>
+      <li>
+        <h3>Masters of Machine Learning/Computer Science at Georgia Institute of Technology</h3>
+        <p>Brief description of your studies and achievements.</p>
+      </li>
+      <li>
+        <h3>Bachelors of Computer Engineering at Texas A&M University</h3>
+        <p>Brief description of your studies and achievements.</p>
+      </li>
+      <!-- Add more education details as needed -->
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div data-toggle-target="content">
+    <ul>
+      <li>Skill 1</li>
+      <li>Skill 2</li>
+      <li>Skill 3</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div data-toggle-target="content">
+    <p>If you'd like to get in touch, please contact me a kraig.orcutt9@gmail.com.</p>
+  </div>
+</section>
+
+<nav>
+  <ul>
+    <li><%= link_to 'About Me', '#about-me' %></li>
+    <li><%= link_to 'Experience', '#experience' %></li>
+    <li><%= link_to 'Education', '#education' %></li>
+    <li><%= link_to 'Skills', '#skills' %></li>
+    <li><%= link_to 'Contact', '#contact' %></li>
+  </ul>
+</nav>
+
+<%= turbo_frame_tag "dynamic-content" do %>
+  <!-- Dynamic content will be loaded here -->
+<% end %>

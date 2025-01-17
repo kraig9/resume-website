@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"restoreTerminals.terminals": [
+		{
+		"splitTerminals": [
+			{
+			"name": "server",
+			"commands": ["wsl"]
+			},
+			{
+			"name": "general",
+			"commands": ["wsl"]
+			}
+		]
+		},
+		// {
+		// "splitTerminals": [
+		// 	{
+		// 	"name": "build & e2e",
+		// 	"commands": ["npm run eslint", "npm run build", "npm run e2e"],
+		// 	"shouldRunCommands": false
+		// 	},
+		// 	{
+		// 	"name": "worker",
+		// 	"commands": ["npm-run-all --parallel redis tsc-watch-start worker"]
+		// 	}
+		// ]
+		// }
+	]
+	}
+
+	
+}
